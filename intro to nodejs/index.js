@@ -1,10 +1,12 @@
 const axios = require("axios");
 
-axios
-  .post("http://localhost:3000/calculate", { num1: 10, num2: 20 })
-  .then((res) => {
-    console.log(res.data);
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+for (let i = 0; i < 1000; i++) {
+  axios
+    .get("http://localhost:8080/products")
+    .then((res) => {
+      console.log(res.data);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+}

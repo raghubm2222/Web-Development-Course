@@ -17,7 +17,6 @@ app.post("/calculate", (req, res) => {
   const data = req.body;
   const num1 = Number(data.num1);
   const num2 = Number(data.num2);
-  console.log(req.body);
   res.send(
     "<h2>The Sum of " + num1 + " and " + num2 + " = " + (num1 + num2) + "</h2>"
   );
